@@ -25,6 +25,16 @@ const config = {
         "2xl": "1400px",
       },
     },
+    keyframes: {
+      shimmer: {
+        from: {
+          backgroundPosition: "0 0",
+        },
+        to: {
+          backgroundPosition: "-200% 0",
+        },
+      },
+    },
     extend: {
       colors: {
         black: {
