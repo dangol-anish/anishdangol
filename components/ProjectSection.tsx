@@ -3,18 +3,20 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { RiArrowRightUpFill } from "react-icons/ri";
 import { projects } from "@/data";
+import Link from "next/link";
 
 export function ProjectSection() {
   return (
     <div className="py-20">
-      <h1 className="heading">
+      <h1 className="heading pb-5">
         A collection of my <span className="text-purple">recent projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
+      <div className="flex flex-wrap items-center md:justify-center lg:justify-between gap-16 mt-10">
         {projects.map((project) => (
           <CardContainer key={project.id} className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[37rem] h-auto min-h-[20rem] rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-stone-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto min-h-[20rem] rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -65,6 +67,11 @@ export function ProjectSection() {
           </CardContainer>
         ))}
       </div>
+      <Link href="/project" className="text-violet-500 ">
+        <p className="my-10 flex ">
+          View Full Project Archive <RiArrowRightUpFill size={25} />
+        </p>
+      </Link>
     </div>
   );
 }
