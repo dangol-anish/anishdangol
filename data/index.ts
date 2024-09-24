@@ -29,7 +29,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My hobbies",
+    title: "Hobbies",
     description: "",
     className: "md:col-span-2 md:row-span-1 col-span-3 row-span-2",
     imgClassName: "",

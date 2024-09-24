@@ -15,7 +15,7 @@ function MagicButton({
 }) {
   return (
     <div>
-      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-lg border border-purple bg-[linear-gradient(110deg,#0a0015,45%,#2a0a3d,55%,#0a0015)] bg-[length:200%_100%] font-medium text-purple transition-colors  focus:ring-1 focus:ring-purple gap-2 px-12">
+      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-lg border border-violet-300 bg-[linear-gradient(110deg,#0a0015,45%,#2a0a3d,55%,#0a0015)] bg-[length:200%_100%] font-medium text-violet-300 transition-colors  focus:ring-1 focus:ring-violet-300 gap-2 px-12">
         {position === "left" && icon}
 
         {title}
