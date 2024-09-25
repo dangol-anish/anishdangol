@@ -11,9 +11,9 @@ export function ProjectSection() {
   return (
     <div className="py-20">
       <h1 className="heading pb-5">
-        A collection of my <span className="text-purple">recent projects</span>
+        A collection of my <span className="text-purple">Recent Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center md:justify-center lg:justify-between gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center  lg:justify-between gap-16 mt-10">
         {projects.map((project) => (
           <CardContainer key={project.id} className="inter-var">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-stone-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto min-h-[20rem] rounded-xl p-6 border">

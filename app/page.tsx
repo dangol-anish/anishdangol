@@ -1,6 +1,7 @@
 import GridSection from "@/components/GridSection";
 import HeroSection from "@/components/HeroSection";
 import { ProjectSection } from "@/components/ProjectSection";
+import SkillSection from "@/components/SkillSection";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
 
@@ -21,6 +22,7 @@ export default function Home() {
           <HeroSection />
           <GridSection />
           <ProjectSection />
+          <SkillSection />
         </div>
       </main>
     </>
