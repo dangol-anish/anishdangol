@@ -10,9 +10,9 @@ export const gridItems = [
     id: 1,
     title: "About Me",
     description: "",
-    className: "md:col-span-2 md:row-span-2 col-span-3 row-span-2",
+    className: "md:col-span-2 md:row-span-2 col-span-3 row-span-2 ",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
+    titleClassName: "justify-end text-violet-500",
 
     spareImg: "",
   },
@@ -107,6 +107,7 @@ export const skillset = [
       "Aceternity UI",
       "Redux Toolkit",
       "Bootstrap",
+      "p5js",
     ],
   },
   {

@@ -1,3 +1,5 @@
+import ContactSection from "@/components/ContactSection";
+import FooterSection from "@/components/FooterSection";
 import GridSection from "@/components/GridSection";
 import HeroSection from "@/components/HeroSection";
 import { ProjectSection } from "@/components/ProjectSection";
@@ -23,6 +25,8 @@ export default function Home() {
           <GridSection />
           <ProjectSection />
           <SkillSection />
+          <ContactSection />
+          <FooterSection />
         </div>
       </main>
     </>
