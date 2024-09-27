@@ -1,5 +1,7 @@
+import { gridItems } from "@/data";
 import { cn } from "@/libs/utils/cn";
 
+// BentoGrid component to wrap the grid layout
 export const BentoGrid = ({
   className,
   children,
@@ -19,29 +21,30 @@ export const BentoGrid = ({
   );
 };
 
+// BentoGridItem component to represent individual grid items
 export const BentoGridItem = ({
   className,
   title,
   description,
-  id,
+  list,
   img,
   imgClassName,
   titleClassName,
-  spareImg,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
-  id?: number;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
-  spareImg?: string;
+  list?: { emoji?: string; name: string }[];
 }) => {
   return (
     <div
       className={cn(
-        "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 overflow-hidden",
+        img
+          ? "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between hidden md:flex flex-col space-y-4 overflow-hidden"
+          : "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 overflow-hidden",
         className
       )}
       style={{
@@ -74,9 +77,27 @@ export const BentoGridItem = ({
         >
           {title}
         </div>
-        <div className="font-sans font-normal text-white text-lg">
-          {description}
-        </div>
+
+        {description ? (
+          <p
+            className="text-xl text-justify text-stone-200"
+            style={{ whiteSpace: "pre-line" }}
+          >
+            {description}
+          </p>
+        ) : list ? (
+          <ul>
+            {list.map((item, index) => (
+              <li
+                key={index}
+                className="flex gap-2 items-center text-xl py-1  text-stone-200"
+              >
+                {item.emoji && <span>{item.emoji}</span>}
+                <span>{item.name}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </div>
   );

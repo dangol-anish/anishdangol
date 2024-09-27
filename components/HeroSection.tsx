@@ -2,7 +2,7 @@ import { FaAngleRight, FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FloatingDock } from "./ui/floating-dock";
-import { skillset, socialMedia } from "@/data";
+import { socialMedia } from "@/data";
 
 function HeroSection() {
   return (
@@ -24,7 +24,7 @@ function HeroSection() {
             words="Hey there! I am Anish Dangol"
             className="text-center text-[40px] md:text-4xl lg:text-5xl"
           />
-          <p className="text-center md:tracking-wider  text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider text-sm md:text-lg lg:text-2xl text-stone-200">
             A fullstack web developer, based in Nepal.
           </p>
           <MagicButton
