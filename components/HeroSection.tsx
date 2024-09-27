@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa";
+import { FaAngleRight, FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FloatingDock } from "./ui/floating-dock";
@@ -29,13 +29,13 @@ function HeroSection() {
           </p>
           <MagicButton
             title="Show my projects"
-            icon={<FaLocationArrow />}
+            icon={<FaAngleRight />}
             position="right"
           />
           <div className="my-10">
             <FloatingDock
               items={socialMedia.map((item) => ({
-                title: item.alt,
+                title: item.name,
                 icon: <img src={item.img} alt={item.alt} className="h-6 w-6" />,
                 href: item.href,
               }))}

@@ -77,21 +77,31 @@ export const projects = [
 export const socialMedia = [
   {
     id: 1,
+    name: "Github",
     img: "/git.svg",
-    alt: "",
-    href: "#",
+    alt: "git",
+    href: "https://github.com/dangol-anish",
   },
   {
     id: 2,
-    img: "/twit.svg",
-    alt: "",
-    href: "#",
+    name: "LinkedIn",
+    img: "/link.svg",
+    alt: "link",
+    href: "https://www.linkedin.com/in/dangol-anish/",
   },
   {
     id: 3,
-    img: "/link.svg",
-    alt: "",
-    href: "#",
+    name: "Instagram",
+    img: "/insta.svg",
+    alt: "insta",
+    href: "https://www.instagram.com/anishdngl/",
+  },
+  {
+    id: 4,
+    name: "X",
+    img: "/twit.svg",
+    alt: "x",
+    href: "https://x.com/dg_anish",
   },
 ];
 

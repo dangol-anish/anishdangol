@@ -10,7 +10,7 @@ import Link from "next/link";
 export function ProjectSection() {
   return (
     <div className="py-20">
-      <h1 className="heading pb-5">
+      <h1 id="projects-section" className="heading pb-5">
         A collection of my{" "}
         <span className="text-violet-500">Recent Projects</span>
       </h1>
