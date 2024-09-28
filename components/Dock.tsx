@@ -17,11 +17,9 @@ export function Dock() {
           <div className="flex flex-wrap items-center justify-center">
             <FloatingDock
               items={category.list.map((item) => ({
-                title: item,
-                icon: (
-                  <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-                ), // Placeholder icon, adjust based on category if needed
-                href: "#", // You can modify the link if needed
+                title: item.name,
+                icon: item.icon,
+                href: item.href || "#", // Ensure the link is correctly applied
               }))}
             />
           </div>

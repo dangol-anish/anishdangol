@@ -36,7 +36,7 @@ function HeroSection() {
             <FloatingDock
               items={socialMedia.map((item) => ({
                 title: item.name,
-                icon: <img src={item.img} alt={item.alt} className="h-6 w-6" />,
+                icon: item.icon,
                 href: item.href,
               }))}
             />

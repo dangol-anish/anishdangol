@@ -1,12 +1,6 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
 "use client";
 
 import { cn } from "@/libs/utils/cn";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -18,12 +12,13 @@ import {
 import Link from "next/link";
 import { useRef, useState } from "react";
 
+// Define the FloatingDock component
 export const FloatingDock = ({
   items,
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -35,58 +30,59 @@ export const FloatingDock = ({
   );
 };
 
+// Mobile version of the floating dock
 const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   className?: string;
 }) => {
   return (
     <div className={cn("relative block md:hidden", className)}>
       <AnimatePresence>
-        {
-          <motion.div
-            layoutId="nav"
-            className="flex flex-wrap gap-4 mt-2 justify-center" // Added flex-wrap
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+        <motion.div
+          layoutId="nav"
+          className="flex flex-wrap gap-4 mt-2 justify-center"
+        >
+          {items.map((item, idx) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{
+                opacity: 0,
+                y: 10,
+                transition: {
+                  delay: idx * 0.05,
+                },
+              }}
+              transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+            >
+              <Link
+                href={item.href}
+                className="h-10 w-10 rounded-full bg-gray-50 dark:bg-stone-900 flex items-center justify-center"
               >
-                <Link
-                  href={item.href}
-                  className="h-10 w-10 rounded-full bg-gray-50 dark:bg-stone-900 flex items-center justify-center"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        }
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="h-full w-full object-contain"
+                />
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
       </AnimatePresence>
     </div>
   );
 };
 
+// Desktop version of the floating dock
 const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -95,7 +91,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-stone-900 px-4 pb-3",
+        "mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-stone-900 px-4 pb-3",
         className
       )}
     >
@@ -106,6 +102,7 @@ const FloatingDockDesktop = ({
   );
 };
 
+// IconContainer to handle the hover effect and image scaling
 function IconContainer({
   mouseX,
   title,
@@ -114,14 +111,13 @@ function IconContainer({
 }: {
   mouseX: MotionValue;
   title: string;
-  icon: React.ReactNode;
+  icon: string;
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
   let distance = useTransform(mouseX, (val) => {
     let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
     return val - bounds.x - bounds.width / 2;
   });
 
@@ -160,7 +156,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -184,7 +180,11 @@ function IconContainer({
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
-          {icon}
+          <img
+            src={icon}
+            alt={title}
+            className="h-full w-full object-contain"
+          />
         </motion.div>
       </motion.div>
     </Link>

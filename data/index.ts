@@ -127,28 +127,28 @@ export const socialMedia = [
   {
     id: 1,
     name: "Github",
-    img: "/git.svg",
+    icon: "/git.svg",
     alt: "git",
     href: "https://github.com/dangol-anish",
   },
   {
     id: 2,
     name: "LinkedIn",
-    img: "/link.svg",
+    icon: "/link.svg",
     alt: "link",
     href: "https://www.linkedin.com/in/dangol-anish/",
   },
   {
     id: 3,
     name: "Instagram",
-    img: "/insta.svg",
+    icon: "/insta.svg",
     alt: "insta",
     href: "https://www.instagram.com/anishdngl/",
   },
   {
     id: 4,
     name: "X",
-    img: "/twit.svg",
+    icon: "/twit.svg",
     alt: "x",
     href: "https://x.com/dg_anish",
   },
@@ -157,37 +157,157 @@ export const socialMedia = [
 export const skillset = [
   {
     heading: "Languages",
-    list: ["HTML", "CSS", "JavaScript", "TypeScript", "C#", "PHP"],
+    list: [
+      {
+        name: "HTML",
+        href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        icon: "/html.svg",
+      },
+      {
+        name: "CSS",
+        href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        icon: "/css.svg",
+      },
+      {
+        name: "JavaScript",
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        icon: "/js.svg",
+      },
+      {
+        name: "TypeScript",
+        href: "https://www.typescriptlang.org/",
+        icon: "/ts.svg",
+      },
+      {
+        name: "C#",
+        href: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+        icon: "/csharp.svg",
+      },
+      {
+        name: "PHP",
+        href: "https://www.php.net/",
+        icon: "/php.svg",
+      },
+    ],
   },
   {
     heading: "Frameworks & Libraries",
     list: [
-      "JQuery",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "shadcn/ui",
-      "Aceternity UI",
-      "Redux Toolkit",
-      "Bootstrap",
-      "p5js",
+      {
+        name: "React",
+        href: "https://reactjs.org/",
+        icon: "/re.svg",
+      },
+      {
+        name: "Next.js",
+        href: "https://nextjs.org/",
+        icon: "/next.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        href: "https://tailwindcss.com/",
+        icon: "/tail.svg",
+      },
+      {
+        name: "Node.js",
+        href: "https://nodejs.org/en/",
+        icon: "/node.svg",
+      },
+      {
+        name: "Express",
+        href: "https://expressjs.com/",
+        icon: "/ex.svg",
+      },
+      {
+        name: "shadcn/ui",
+        href: "https://shadcn.dev/",
+        icon: "/shadcn.svg",
+      },
+      {
+        name: "Aceternity UI",
+        href: "https://aceternity.dev/",
+        icon: "/ace.svg",
+      },
+      {
+        name: "Redux Toolkit",
+        href: "https://redux-toolkit.js.org/",
+        icon: "/rtk.svg",
+      },
+      {
+        name: "Bootstrap",
+        href: "https://getbootstrap.com/",
+        icon: "/bs.svg",
+      },
+      {
+        name: "p5js",
+        href: "https://p5js.org/",
+        icon: "/p5js.svg",
+      },
     ],
   },
   {
     heading: "Databases and ORMs",
     list: [
-      "PostgreSQL",
-      "MongoDB",
-      "Supabase",
-      "Firebase",
-      "Sequelize",
-      "Drizzle",
+      {
+        name: "MySQL",
+        href: "https://www.mysql.org/",
+        icon: "/mysql.svg",
+      },
+      {
+        name: "PostgreSQL",
+        href: "https://www.postgresql.org/",
+        icon: "/pg.svg",
+      },
+      {
+        name: "MongoDB",
+        href: "https://www.mongodb.com/",
+        icon: "/mongo.svg",
+      },
+      {
+        name: "Supabase",
+        href: "https://supabase.com/",
+        icon: "/supa.svg",
+      },
+      {
+        name: "Firebase",
+        href: "https://firebase.google.com/",
+        icon: "/fbase.svg",
+      },
+      {
+        name: "Sequelize",
+        href: "https://sequelize.org/",
+        icon: "/seq.svg",
+      },
     ],
   },
   {
     heading: "Tools",
-    list: ["Git", "GitHub", "Postman", "Vercel", "Jest"],
+    list: [
+      {
+        name: "Git",
+        href: "https://git-scm.com/",
+        icon: "/git1.svg",
+      },
+      {
+        name: "GitHub",
+        href: "https://github.com/",
+        icon: "/gh1.svg",
+      },
+      {
+        name: "Postman",
+        href: "https://www.postman.com/",
+        icon: "/postman.svg",
+      },
+      {
+        name: "Vercel",
+        href: "https://vercel.com/",
+        icon: "/vercel.svg",
+      },
+      {
+        name: "Jest",
+        href: "https://jestjs.io/",
+        icon: "/jest.svg",
+      },
+    ],
   },
 ];
