@@ -7,16 +7,14 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { cn } from "@/libs/utils/cn";
-import Link from "next/link";
 import { navItems } from "@/data";
+import Link from "next/link";
 
 export const FloatingNav = () => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
@@ -31,6 +29,13 @@ export const FloatingNav = () => {
       }
     }
   });
+
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -54,12 +59,16 @@ export const FloatingNav = () => {
           <Link
             key={`link=${idx}`}
             href={navItem.link}
+            scroll={false}
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll(navItem.link.substring(1)); // Remove '#' from href
+            }}
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className=" sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
       </motion.div>
