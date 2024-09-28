@@ -48,7 +48,7 @@ const FloatingDockMobile = ({
         {
           <motion.div
             layoutId="nav"
-            className="flex flex-wrap gap-4 mt-2 justify-center items-center"
+            className="flex flex-wrap gap-4 mt-2 justify-center" // Added flex-wrap
           >
             {items.map((item, idx) => (
               <motion.div
@@ -70,7 +70,6 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-stone-900 flex items-center justify-center"
-                  target="_blank"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
                 </Link>
@@ -161,7 +160,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href} target="_blank">
+    <Link href={href}>
       <motion.div
         ref={ref}
         style={{ width, height }}

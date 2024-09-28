@@ -135,6 +135,8 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
+      // Conditionally set target to _blank if the Tag is an anchor <a>
+      {...(Tag === "a" ? { target: "_blank" } : {})}
       {...rest}
     >
       {children}
