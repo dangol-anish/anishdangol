@@ -108,7 +108,7 @@ export const projects = [
   {
     id: 4,
     title: "EstateGateway",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
+    des: "A user-friendly real estate app that connects buyers and sellers with intuitive listings and advanced search features.",
     img: "/estategateway.png",
     iconLists: [
       "/re.svg",

@@ -61,7 +61,7 @@ const FloatingDockMobile = ({
             >
               <Link
                 href={item.href}
-                className="h-10 w-10 rounded-full bg-gray-50 dark:bg-stone-900 flex items-center justify-center"
+                className="h-7 w-7 rounded-full bg-gray-50 dark:bg-stone-900 flex items-center justify-center"
               >
                 <img
                   src={item.icon}

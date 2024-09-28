@@ -65,7 +65,7 @@ export const FloatingNav = () => {
               handleScroll(navItem.link.substring(1)); // Remove '#' from href
             }}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 py-2"
             )}
           >
             <span className=" sm:block text-sm">{navItem.name}</span>

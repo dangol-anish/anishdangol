@@ -75,11 +75,11 @@ export function ProjectSection() {
           </CardContainer>
         ))}
       </div>
-      <Link href="/project" className="text-violet-500 ">
+      {/* <Link href="/project" className="text-violet-500 ">
         <p className="my-10 flex ">
           View Full Project Archive <RiArrowRightUpFill size={25} />
         </p>
-      </Link>
+      </Link> */}
     </div>
   );
 }
