@@ -80,7 +80,7 @@ export const BentoGridItem = ({
 
         {description ? (
           <p
-            className="text-xl text-justify text-stone-200"
+            className="text-xl text-justify text-stone-300"
             style={{ whiteSpace: "pre-line" }}
           >
             {description}
@@ -90,7 +90,7 @@ export const BentoGridItem = ({
             {list.map((item, index) => (
               <li
                 key={index}
-                className="flex gap-2 items-center text-xl py-1  text-stone-200"
+                className="flex gap-2 items-center text-xl py-1  text-stone-300"
               >
                 {item.emoji && <span>{item.emoji}</span>}
                 <span>{item.name}</span>

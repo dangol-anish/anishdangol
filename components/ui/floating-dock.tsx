@@ -48,7 +48,7 @@ const FloatingDockMobile = ({
         {
           <motion.div
             layoutId="nav"
-            className="flex flex-wrap gap-4 mt-2 justify-center " // Added flex-wrap
+            className="flex flex-wrap gap-4 mt-2 justify-center items-center"
           >
             {items.map((item, idx) => (
               <motion.div
