@@ -8,7 +8,7 @@ function ContactSection() {
   };
 
   return (
-    <div className="py-20 flex flex-col justify-center items-center gap-8">
+    <div className="py-20 px-10 flex flex-col justify-center items-center gap-8">
       <div className="flex justify-center flex-col items-center">
         <h2 className="heading pb-2" id="contact-section">
           Interested in{" "}
