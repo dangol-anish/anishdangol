@@ -100,7 +100,7 @@ export const projects = [
     id: 3,
     title: "Portfolio",
     des: "A personalized portfolio website designed to highlight my projects and skillset.",
-    img: "/re.svg",
+    img: "/portfolio.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/fm.svg", "/ace.svg"],
     link: "https://www.dangolanish.com.np/",
   },

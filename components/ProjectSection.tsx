@@ -14,7 +14,7 @@ export function ProjectSection() {
         A collection of my{" "}
         <span className="text-violet-500">Recent Projects</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center  lg:justify-between gap-16 mt-10">
+      <div className="flex flex-wrap items-center justify-center gap-12 mt-10">
         {projects.map((project) => (
           <CardContainer key={project.id} className="inter-var">
             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-violet-500/[0.1] dark:bg-stone-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto min-h-[20rem] rounded-xl p-6 border">
@@ -45,7 +45,7 @@ export function ProjectSection() {
                   alt={project.img}
                 />
               </CardItem>
-              <div className="flex justify-between items-center mt-20">
+              <div className="flex flex-col md:flex-row justify-between items-center mt-10">
                 <CardItem
                   translateZ={20}
                   translateX={-40}
