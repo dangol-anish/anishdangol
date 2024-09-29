@@ -4,6 +4,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FloatingDock } from "./ui/floating-dock";
 import { socialMedia } from "@/data";
 import { BackgroundBeams } from "./ui/background-beams";
+import Image from "next/image";
 
 function HeroSection() {
   return (
@@ -18,8 +19,15 @@ function HeroSection() {
         />
       </div> */}
       <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center gap-5 z-50">
-          <div className="bg-violet-300 h-44 w-44 border rounded-full mt-36"></div>
+        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-end gap-5 z-50 mt-36">
+          {/* <div className="bg-violet-300 h-44 w-44 border rounded-full mt-36"></div> */}
+          <Image
+            className=" object-contain"
+            src="/anishdangol.png"
+            height={10}
+            width={250}
+            alt="anishdangol"
+          />
           <TextGenerateEffect
             words="Hey there! I am Anish Dangol"
             className="text-center text-[40px] md:text-4xl lg:text-5xl"
