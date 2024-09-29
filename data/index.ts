@@ -9,9 +9,9 @@ export const gridItems = [
   {
     id: 1,
     title: "About Me",
-    description: `Hey there! I’m Anish Dangol, a full-stack web developer based in the vibrant city of Kathmandu, Nepal. With a passion for crafting web applications that genuinely make a difference, I focus on building solutions that are not only functional but also intuitive and user-friendly. My expertise lies in developing seamless digital experiences that merge creativity with technology, ensuring users can easily navigate and interact with the features they need.
-      
-      Currently, my primary focus is to create applications that offer a wide range of functionalities while maintaining simplicity and ease of use. I believe that technology should empower users, not overwhelm them. By focusing on clean design and efficient code, I strive to deliver apps that solve real-world problems and enhance productivity, whether through habit tracking, task management, or other practical tools. When I’m not busy writing code or experimenting with new technologies, I enjoy immersing myself in nature, whether it’s exploring the stunning landscapes around Nepal or traveling to new places. I find that spending time outdoors helps fuel my creativity and keeps me grounded. I’m also an avid reader, always looking to learn something new, and I enjoy expressing my creativity through art whenever I need to unwind.
+    description: `I’m Anish Dangol, a full-stack web developer based in Kathmandu, Nepal, specializing in creating user-focused web applications. My work is driven by a commitment to developing clean, efficient solutions that simplify complex tasks. I focus on building digital solutions that are not only functional but also intuitive, ensuring seamless user experiences across a variety of platforms.
+
+    Outside of my work as a developer, I find inspiration in nature. I love exploring Nepal’s stunning landscapes and traveling to new places, which helps me stay grounded and fuels my creativity. Reading is another passion of mine, constantly feeding my curiosity and pushing me to learn more about the world and new technologies. When I need to unwind, I turn to art, which allows me to express myself creatively and find balance outside the technical realm.
 
       `,
 
