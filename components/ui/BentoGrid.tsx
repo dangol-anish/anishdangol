@@ -44,7 +44,7 @@ export const BentoGridItem = ({
       id="about-section"
       className={cn(
         img
-          ? "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between hidden md:flex flex-col space-y-4 overflow-hidden"
+          ? "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between hidden md:flex flex-col space-y-4 overflow-hidden z-50"
           : "relative row-span-1 rounded-3xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4 overflow-hidden",
         className
       )}

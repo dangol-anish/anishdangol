@@ -4,6 +4,7 @@ import GridSection from "@/components/GridSection";
 import HeroSection from "@/components/HeroSection";
 import { ProjectSection } from "@/components/ProjectSection";
 import SkillSection from "@/components/SkillSection";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { FaHome } from "react-icons/fa";
 

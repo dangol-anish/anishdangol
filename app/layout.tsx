@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter}`}>
+      <body className={`${inter} `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
