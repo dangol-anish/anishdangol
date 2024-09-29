@@ -28,7 +28,7 @@ export const gridItems = [
       "md:row-span-3 md:col-span-1 col-span-3 row-span-2 md:text-center",
     imgClassName: "",
     titleClassName: "justify-start",
-    img: "/b1.svg",
+    img: "/art.png",
     spareImg: "",
   },
   {
