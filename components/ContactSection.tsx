@@ -10,7 +10,7 @@ function ContactSection() {
   return (
     <div className="py-20 px-10 flex flex-col justify-center items-center gap-8">
       <div className="flex justify-center flex-col items-center">
-        <h2 className="heading pb-2" id="contact-section">
+        <h2 className="heading pb-2 text-white" id="contact-section">
           Interested in{" "}
           <span className="text-violet-500">working together?</span>
         </h2>
