@@ -299,6 +299,11 @@ export const skillset = [
         icon: "/postman.svg",
       },
       {
+        name: "Insomnia",
+        href: "https://insomnia.rest",
+        icon: "/ins.svg",
+      },
+      {
         name: "Vercel",
         href: "https://vercel.com/",
         icon: "/vercel.svg",
