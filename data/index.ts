@@ -138,15 +138,9 @@ export const socialMedia = [
     alt: "link",
     href: "https://www.linkedin.com/in/dangol-anish/",
   },
+
   {
     id: 3,
-    name: "Instagram",
-    icon: "/insta.svg",
-    alt: "insta",
-    href: "https://www.instagram.com/anishdngl/",
-  },
-  {
-    id: 4,
     name: "X",
     icon: "/twit.svg",
     alt: "x",
