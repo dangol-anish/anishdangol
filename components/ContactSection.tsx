@@ -4,7 +4,7 @@ import { Button } from "./ui/moving-border";
 
 function ContactSection() {
   const handleContactClick = () => {
-    window.location.href = "mailto:dangolanish@proton.me";
+    window.location.href = "mailto:dangol.anish001@gmail.com";
   };
 
   return (
