@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="min-h-screen dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-600 ">
+      <body className="min-h-screen dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-700 ">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -29,13 +29,13 @@ export function ModeToggle() {
       className="relative transition-colors duration-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-zinc-800"
     >
       <Sun
-        className={`h-[1.2rem] w-[1.2rem] transition-all duration-300 ${
-          isDark ? "rotate-90 scale-0" : "rotate-0 scale-100"
+        className={`transition-all duration-300 ${
+          isDark ? "rotate-90 scale-0" : "rotate-0 scale-120"
         }`}
       />
       <Moon
-        className={`absolute h-[1.2rem] w-[1.2rem] transition-all duration-300 ${
-          isDark ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+        className={`absolute transition-all duration-300 ${
+          isDark ? "rotate-0 scale-120" : "-rotate-90 scale-0"
         }`}
       />
       <span className="sr-only">Toggle theme</span>
