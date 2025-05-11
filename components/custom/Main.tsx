@@ -2,7 +2,7 @@ import React from "react";
 
 const Main = () => {
   return (
-    <main className="h-full pt-28">
+    <main className="h-full py-28">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quisquam
       corrupti beatae molestias deserunt ipsam, maiores modi distinctio. Maiores
       minima qui a tenetur excepturi. Quae, iste unde dicta consequuntur vel

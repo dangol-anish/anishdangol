@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider"; // Make sure thi
 import { RootLayoutProps } from "./types/layout";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/custom/Navbar";
+import Copyright from "@/components/custom/Copyright";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               {children}
             </div>
           </div>
+          <Copyright />
         </ThemeProvider>
       </body>
     </html>
