@@ -32,7 +32,7 @@ const Navbar = () => {
             <Link
               key={item.label}
               href={item.path}
-              className="text-md transition-colors px-2 py-2 hover:bg-gray-200 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white rounded-lg
+              className="text-md transition-colors px-2 py-2 hover:bg-gray-200 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white rounded-lg tracking-wide
 "
             >
               {item.label}

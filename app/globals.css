@@ -120,3 +120,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+:root {
+  --font-sans: var(--font-inter);
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+}
