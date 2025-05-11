@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeProvider } from "@/components/ui/theme-provider"; // Make sure this is correct
 import { RootLayoutProps } from "./types/layout";
+import { Inter } from "next/font/google";
+import Navbar from "@/components/custom/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,20 +23,23 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body className="min-h-screen dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-600 ">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <div className="flex justify-center">
+            <div className="mx-auto max-w-screen-sm px-6 dark:bg-[var(--background)] rounded-lg">
+              {children}
+            </div>
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
