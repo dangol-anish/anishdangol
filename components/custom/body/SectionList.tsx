@@ -22,7 +22,7 @@ export default function SectionList({
   linkText = "See all",
 }: SectionListProps) {
   return (
-    <section className="relative overflow-visible py-6">
+    <section className="relative overflow-visible pb-6 pt-3">
       <div className="flex justify-between items-center my-6 px-6">
         <p className="text-md dark:text-zinc-100 font-semibold">{title}</p>
         {link && (
@@ -36,11 +36,11 @@ export default function SectionList({
         {items.map((item, i) => (
           <Card
             key={i}
-            className="relative cursor-pointer rounded-none border-0 border-b border-zinc-800 shadow-none dark:bg-[var(--background)] transition-all duration-200 ease-in-out hover:scale-[1.02] rounded-tr-xl rounded-tl-xl hover:bg-zinc-300/50 dark:hover:bg-zinc-700/40 z-10"
+            className="relative cursor-pointer rounded-none border-0 border-b  shadow-none dark:bg-[var(--background)] transition-all duration-200 ease-in-out hover:scale-[1.02] rounded-tr-xl rounded-tl-xl hover:bg-zinc-300/50 dark:hover:bg-zinc-700/40 z-10"
           >
             <CardContent className="flex items-center justify-between text-zinc-700 dark:text-zinc-400">
               <div>
-                <h3 className="font-semibold dark:text-zinc-100">
+                <h3 className="font-semibold dark:text-zinc-300">
                   {item.title}
                 </h3>
                 <p className="text-sm">{item.description}</p>

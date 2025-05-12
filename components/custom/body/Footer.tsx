@@ -1,14 +1,9 @@
 "use client";
+import { EbGaramond } from "@/app/config/fontConfig";
 import { footerItems } from "@/app/constants/footeritems";
 import Link from "next/link";
 import React, { useState } from "react";
-import { EB_Garamond } from "next/font/google";
 
-// Import the font
-const EbGaramond = EB_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 const Footer = () => {
   const [copied, setCopied] = useState(false);
   const email = "dangol.anish001@gmail.com";
@@ -17,7 +12,7 @@ const Footer = () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // reset message after 2s
+      setTimeout(() => setCopied(false), 1000); // reset message after 2s
     } catch (err) {
       console.error("Failed to copy!", err);
     }

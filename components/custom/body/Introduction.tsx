@@ -1,8 +1,9 @@
+import { EbGaramond } from "@/app/config/fontConfig";
 import React from "react";
 
 const Introduction = () => {
   return (
-    <p className="p-6">
+    <p className={`${EbGaramond.className} p-6 text-lg `}>
       I am a software engineer, ui/ux designer, product planner, problem solver,
       mentor, forever student, minimalist, and eternal optimist. I love to both
       build and break things. I am motivated by challenging projects with
