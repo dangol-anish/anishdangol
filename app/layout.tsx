@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Home | Anish Dangol",
   description: "My personal portfolio site",
 };
 
@@ -31,13 +31,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <Navbar />
-          <div className="flex justify-center">
-            <div className="mx-auto max-w-screen-sm px-6 dark:bg-[var(--background)] rounded-lg">
-              {children}
-            </div>
-          </div>
+
+          <div className="">{children}</div>
+
           <Copyright />
-          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>
