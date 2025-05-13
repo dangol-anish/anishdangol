@@ -3,22 +3,22 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 export const footerItems = [
   {
     label: "GitHub",
-    path: "https://github.com/yourusername",
+    path: "https://github.com/dangol-anish",
     icon: FaGithub,
   },
   {
     label: "LinkedIn",
-    path: "https://linkedin.com/in/yourusername",
+    path: "https://www.linkedin.com/in/dangol-anish",
     icon: FaLinkedin,
   },
   {
     label: "Instagram",
-    path: "https://instagram.com/yourusername",
+    path: "https://www.instagram.com/anishdngl",
     icon: FaInstagram,
   },
   {
     label: "Email",
-    path: "mailto:your@email.com",
+    path: "mailto:dangol.anish001@gmail.com",
     icon: FaEnvelope,
   },
 ];

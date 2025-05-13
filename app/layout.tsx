@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head />
-      <body className="min-h-screen font-sans dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-700">
+      <body className="min-h-screen flex flex-col font-sans dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-700">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -32,9 +32,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         >
           <Navbar />
 
-          <div className="">{children}</div>
+          {/* Content area that grows */}
+          <main className="flex-grow">{children}</main>
 
+          {/* Footer at the bottom */}
           <Copyright />
+
+          {/* Optional Back to Top Button */}
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>
