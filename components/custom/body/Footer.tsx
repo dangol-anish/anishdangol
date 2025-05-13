@@ -20,8 +20,10 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col gap-6 m-6">
-      <p className="dark:text-zinc-100 font-semibold">Let's connect</p>
-      <p className={`${EbGaramond.className} text-xl`}>
+      <p className="dark:text-zinc-100 font-semibold" id="contact">
+        Let's connect
+      </p>
+      <p className={`${EbGaramond.className} text-lg`}>
         If you want to get in touch with me about something or just to say hi,
         reach out on social media or send me an email.
       </p>
@@ -46,7 +48,7 @@ const Footer = () => {
         >
           {email}
           <span
-            className={`text-sm text-white transition-opacity duration-300 ${
+            className={`text-sm dark:text-zinc-100 transition-opacity duration-300 ${
               copied ? "opacity-100" : "opacity-0"
             }`}
           >
