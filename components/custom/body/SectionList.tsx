@@ -59,15 +59,6 @@ export default function SectionList({
               </div>
 
               <div className="flex items-center gap-5">
-                {item.repo && (
-                  <Link
-                    href={item.repo}
-                    target="_blank"
-                    className="text-sm hover:underline flex items-center gap-1 dark:text-zinc-400 dark:hover:text-zinc-100"
-                  >
-                    <Github size={16} />
-                  </Link>
-                )}
                 {item.live && (
                   <Link
                     href={item.live}
@@ -77,7 +68,7 @@ export default function SectionList({
                     {item.icon ? (
                       item.icon
                     ) : (
-                      <button className="group not-prose inline-flex items-center gap-1 pl-2 pr-0.5 py-1 rounded-md font-bold bg-inherit  text-current hover:text-black hover:dark:text-white border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 hover:dark:bg-zinc-800 transition-colors duration-300 ease-in-out">
+                      <button className="group cursor-pointer not-prose inline-flex items-center gap-1 pl-2 pr-0.5 py-1 rounded-md font-bold bg-inherit  text-current hover:text-black hover:dark:text-white border-zinc-300 dark:border-zinc-700 hover:bg-zinc-200 hover:dark:bg-zinc-800 transition-colors duration-300 ease-in-out">
                         <svg
                           viewBox="0 0 24 24"
                           className="size-5 stroke-[3px] fill-none stroke-current opacity-50 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
@@ -96,6 +87,15 @@ export default function SectionList({
                         </svg>
                       </button>
                     )}
+                  </Link>
+                )}
+                {item.repo && (
+                  <Link
+                    href={item.repo}
+                    target="_blank"
+                    className="text-sm hover:underline flex items-center gap-1 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  >
+                    <Github size={16} />
                   </Link>
                 )}
               </div>

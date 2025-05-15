@@ -1,7 +1,16 @@
+import ContentList from "@/components/custom/ContentList";
 import React from "react";
+import { projects } from "../constants/projectItems";
 
-const page = () => {
-  return <div>page</div>;
+const Projects = () => {
+  return (
+    <ContentList
+      title="Projects"
+      items={projects}
+      link="/projects"
+      linkText="See all projects"
+    />
+  );
 };
 
-export default page;
+export default Projects;

@@ -58,7 +58,7 @@ export const projects = [
     key: "freelancing-platform-nepal",
     title: "Freelancing Platform for Nepal",
     description:
-      "A localized freelancing platform designed to connect freelancers with clients for specialized and niche projects, specifically focused on the region of Nepal.",
+      "Localized platform connecting freelancers with clients in Nepal.",
     icon: (
       <Image
         src="/assets/link.svg"
@@ -76,7 +76,7 @@ export const projects = [
     key: "resume-expert",
     title: "Resume Expert",
     description:
-      "An AI-powered resume builder that helps users craft professional resumes with tailored suggestions and formatting.",
+      "AI-powered resume builder with tailored suggestions and formatting.",
     icon: (
       <Image
         src="/assets/link.svg"
@@ -88,13 +88,13 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/resume-expert",
-    live: "https://resume-expert-omega.vercel.app/",
+    // live: "https://resume-expert-omega.vercel.app/",
   },
   {
     key: "mis-ecommerce",
     title: "MIS E-Commerce WebApp",
     description:
-      "An e-commerce platform built with Next.js and Prisma, featuring a robust backend and dynamic frontend for seamless shopping experiences.",
+      "Next.js e-commerce platform with robust backend and dynamic frontend.",
     icon: (
       <Image
         src="/assets/link.svg"
@@ -111,8 +111,7 @@ export const projects = [
   {
     key: "nasa-apod-viewer",
     title: "NASA Astronomy Picture Viewer",
-    description:
-      "A Next.js application that fetches and displays NASA's Astronomy Picture of the Day, showcasing API integration and responsive design.",
+    description: "Next.js app displaying NASA’s Astronomy Picture of the Day.",
     icon: (
       <Image
         src="/assets/link.svg"
@@ -124,6 +123,6 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/nextjs-assignment",
-    live: "https://nextjs-assignment-plum.vercel.app/",
+    live: "https://nasa-astronomy-highlight.vercel.app/",
   },
 ];

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { navItems } from "@/app/constants/navItems";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Icon from "../ui/Logo";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -43,13 +44,7 @@ const Navbar = () => {
           onClick={handleLogoClick}
           className="rounded-full p-1 bg-[#19191b] dark:bg-white border-white dark:border-[#19191b] relative"
         >
-          <Image
-            src="/assets/owl-dark.svg"
-            alt="Logo"
-            width={25}
-            height={25}
-            className="invert dark:no-invert"
-          />
+          <Icon />
         </Link>
 
         {/* Navbar Links */}
