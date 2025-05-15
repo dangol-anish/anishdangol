@@ -1,11 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { ArrowUpRight, Github } from "lucide-react";
 
 interface SectionItem {
   title: string;
   description: string;
   icon?: ReactNode;
+  live?: string;
+  repo?: string;
 }
 
 interface SectionListProps {
@@ -24,28 +27,57 @@ export default function SectionList({
   return (
     <section className="relative overflow-visible pb-6 pt-3">
       <div className="flex justify-between items-center my-6 px-6">
-        <p className="text-md dark:text-zinc-100 font-semibold">{title}</p>
+        <p className="text-md dark:text-zinc-100 font-semibold text-zinc-900">
+          {title}
+        </p>
         {link && (
-          <Link href={link} className="text-sm dark:text-zinc-100">
+          <Link
+            href={link}
+            className="text-sm dark:text-zinc-400 dark:hover:text-zinc-100 hover:text-zinc-900"
+          >
             {linkText}
           </Link>
         )}
       </div>
 
-      <div className="space-y-2">
-        {items.map((item, i) => (
+      <div className="space-y-4 px-6">
+        {items.slice(0, 3).map((item) => (
           <Card
-            key={i}
-            className="relative cursor-pointer rounded-none border-0 border-b  shadow-none dark:bg-[var(--background)] transition-all duration-200 ease-in-out hover:scale-[1.02] rounded-tr-xl rounded-tl-xl hover:bg-zinc-300/50 dark:hover:bg-zinc-700/40 z-10"
+            key={item.title}
+            className="group border-0 border-b border-zinc-800 rounded-none dark:bg-zinc-900 rounded-t-xl transition-all duration-300 relative hover:z-10 hover:-mx-4 hover:px-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 my-1 shadow-none"
           >
-            <CardContent className="flex items-center justify-between text-zinc-700 dark:text-zinc-400">
-              <div>
-                <h3 className="font-semibold dark:text-zinc-300">
-                  {item.title}
-                </h3>
-                <p className="text-sm">{item.description}</p>
+            <CardContent className="flex items-center justify-between px-0 w-full max-w-[100%]">
+              <div className="flex items-start gap-4 w-[90%]">
+                <div className="w-full">
+                  <p className="font-medium text-md text-zinc-700 dark:text-zinc-100">
+                    {item.title}
+                  </p>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400 ">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              {item.icon && <div>{item.icon}</div>}
+
+              <div className="flex items-center gap-5">
+                {item.repo && (
+                  <Link
+                    href={item.repo}
+                    target="_blank"
+                    className="text-sm hover:underline flex items-center gap-1 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  >
+                    <Github size={16} />
+                  </Link>
+                )}
+                {item.live && (
+                  <Link
+                    href={item.live}
+                    target="_blank"
+                    className="text-sm hover:underline flex items-center gap-1"
+                  >
+                    {item.icon}
+                  </Link>
+                )}
+              </div>
             </CardContent>
           </Card>
         ))}

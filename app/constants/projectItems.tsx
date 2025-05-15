@@ -1,17 +1,129 @@
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export const projects = [
   {
-    title: "Sphere",
-    description: "Portfolio and blog built with astro.",
-    icon: <ArrowUpRight className="w-4 h-4" />,
+    key: "road-sense",
+    title: "Road Sense: Alternative Route Finder",
+    description:
+      "Smart navigation app for safer, obstacle-free alternative routes.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
     active: true,
+    repo: "https://github.com/dangol-anish/RS-alternate-route-finder",
+    // live: "https://sphere.example.com",
   },
   {
-    title: "Nano",
-    description:
-      "Minimal portfolio and blog built with astro and no frameworks.",
-    icon: <ArrowUpRight className="w-4 h-4" />,
+    key: "chronicle",
+    title: "Chronicle",
+    description: "An all-in-one app to elevate your productivity",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
     active: false,
+    repo: "https://github.com/dangol-anish/chronicle",
+    live: "https://chronicle-kappa.vercel.app/",
+  },
+  {
+    key: "linkleap",
+    title: "LinkLeap",
+    description: "CRM system for efficient insights, and organization.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/linkleap",
+    live: "https://linkleap-client.vercel.app/",
+  },
+  {
+    key: "freelancing-platform-nepal",
+    title: "Freelancing Platform for Nepal",
+    description:
+      "A localized freelancing platform designed to connect freelancers with clients for specialized and niche projects, specifically focused on the region of Nepal.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/freelancing-website",
+    // live: "https://freelancing-website.example.com",
+  },
+  {
+    key: "resume-expert",
+    title: "Resume Expert",
+    description:
+      "An AI-powered resume builder that helps users craft professional resumes with tailored suggestions and formatting.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/resume-expert",
+    live: "https://resume-expert-omega.vercel.app/",
+  },
+  {
+    key: "mis-ecommerce",
+    title: "MIS E-Commerce WebApp",
+    description:
+      "An e-commerce platform built with Next.js and Prisma, featuring a robust backend and dynamic frontend for seamless shopping experiences.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/mis_e-commerce_webapp",
+    // live: "https://mis-ecommerce.example.com",
+  },
+  {
+    key: "nasa-apod-viewer",
+    title: "NASA Astronomy Picture Viewer",
+    description:
+      "A Next.js application that fetches and displays NASA's Astronomy Picture of the Day, showcasing API integration and responsive design.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/nextjs-assignment",
+    live: "https://nextjs-assignment-plum.vercel.app/",
   },
 ];

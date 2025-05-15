@@ -12,15 +12,15 @@ export default function Work() {
           <p className="text-md dark:text-zinc-100 font-semibold">Work</p>
         </div>
 
-        <div className="space-y-2 px-6">
+        <div className="py-4 px-6">
           <div>
-            <h3 className="font-semibold dark:text-zinc-300">
+            <h3 className="font-semibold dark:text-zinc-300 text-md text-zinc-700">
               RoadSense: Alternative Path Finder
             </h3>
             <p className="text-sm">Research</p>
             <p className="text-sm">Jan 2025 - Current</p>
           </div>
-          <p className={`${EbGaramond.className} text-lg`}>
+          <p className={`${EbGaramond.className} text-md py-2`}>
             Currently, I am working on a research paper on alternative path
             finding mechanism where I test methods and efficiency of algorithms
             to find paths between nodes.

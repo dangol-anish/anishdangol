@@ -13,11 +13,15 @@ const PersonalInfo = () => {
         </p>
       </div>
       <Image
-        src="/assets/personal/me.jpeg"
+        src="/assets/personal/me.webp"
         width={120}
         height={120}
         alt="Anish Dangol"
-        className="rounded-4xl object-cover "
+        className="rounded-4xl object-cover"
+        priority
+        quality={85}
+        placeholder="blur"
+        blurDataURL="/assets/personal/me-blur.webp"
       />
     </section>
   );

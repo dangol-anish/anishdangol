@@ -23,7 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head />
-      <body className="min-h-screen flex flex-col font-sans dark:bg-[var(--background)] transition-all dark:text-zinc-400 text-zinc-700">
+      <body className="min-h-screen flex flex-col font-sans dark:bg-[var(--background)] transition-all dark:text-zinc-300 text-zinc-700">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

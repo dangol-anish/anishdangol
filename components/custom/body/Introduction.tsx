@@ -3,15 +3,27 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <p className={`${EbGaramond.className} p-6 text-lg `}>
-      I am a software engineer, ui/ux designer, product planner, problem solver,
-      mentor, forever student, minimalist, and eternal optimist. I love to both
-      build and break things. I am motivated by challenging projects with
-      self-guided research and dynamic problem solving. My true passion is
-      crafting creative front end designs with unique takes on color, typography
-      and motion. This is my personal space, where I share my work and projects.
-      I also write interactive blog posts about engineering and design.
-    </p>
+    <section id="about" className={`${EbGaramond.className} p-6 text-lg `}>
+      <p>
+        I’m a <em>software engineer</em>, <em>UI/UX designer</em>, and a{" "}
+        <em>problem solver</em> who loves crafting simple and meaningful digital
+        experiences. My approach is shaped by minimalism, focusing on clarity,
+        function, and clean design.
+      </p>
+      <br />
+      <p>
+        I enjoy self-driven project that challenge me to research, build, and
+        improve. Whether coding or designing, I’m always exploring new tools and
+        better solutions.
+      </p>
+      <br />
+
+      <p>
+        This is my personal space to build, break, and share. I also write
+        interactive blogon engineering and design, keeping things simple and
+        practical.
+      </p>
+    </section>
   );
 };
 
