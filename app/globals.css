@@ -132,3 +132,13 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* styles/globals.css */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
