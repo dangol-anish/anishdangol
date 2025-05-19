@@ -1,11 +1,10 @@
-// app/page.tsx or wherever Home is
 import Main from "@/components/custom/Main";
-import ScrollToSection from "@/components/custom/body/ScrollToSection";
+import ScrollToSectionWrapper from "@/components/custom/body/ScrollToSectionWrapper";
 
 export default function Home() {
   return (
     <>
-      <ScrollToSection />
+      <ScrollToSectionWrapper />
       <Main />
     </>
   );
