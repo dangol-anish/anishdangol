@@ -42,10 +42,8 @@ const Navbar = () => {
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="rounded-full p-1 bg-[#19191b] dark:bg-white border-white dark:border-[#19191b] relative"
-        >
-          <Icon />
-        </Link>
+          className="rounded-full p-1 bg-[#19191b] dark:bg-white border-white dark:border-[#19191b] relative w-7 h-7 "
+        ></Link>
 
         {/* Navbar Links */}
         <div className="flex items-center">

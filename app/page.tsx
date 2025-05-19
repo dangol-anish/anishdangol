@@ -1,26 +1,11 @@
-"use client";
-import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+// app/page.tsx or wherever Home is
 import Main from "@/components/custom/Main";
+import ScrollToSection from "@/components/custom/body/ScrollToSection";
 
 export default function Home() {
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const scrollTo = searchParams.get("scrollTo");
-
-    if (scrollTo === "contact") {
-      setTimeout(() => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100); // Small delay to ensure DOM is ready
-    }
-  }, [searchParams]);
-
   return (
     <>
+      <ScrollToSection />
       <Main />
     </>
   );

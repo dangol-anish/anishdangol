@@ -1,16 +1,22 @@
 import ContentList from "@/components/custom/ContentList";
-import React from "react";
-import { blogItems } from "../constants/blogItems";
+import { getCategorisedArticle } from "@/lib/articles";
 
-const Blog = () => {
+export default function Blog() {
+  const categorised = getCategorisedArticle();
+  const articles = Object.values(categorised).flat();
+
+  const blogItems = articles.map((article) => ({
+    title: article.title,
+    description: `${article.category} | ${article.date}`,
+    live: `/blog/${article.id}`,
+  }));
+
   return (
     <ContentList
-      title="Projects"
+      title="Articles"
       items={blogItems}
       link="/blog"
-      linkText="See all projects"
+      linkText="See all articles"
     />
   );
-};
-
-export default Blog;
+}

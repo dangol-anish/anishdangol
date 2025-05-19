@@ -1,7 +1,3 @@
-import { work } from "@/app/constants/workItems";
-import SectionList from "./SectionList";
-import { projects } from "@/app/constants/projectItems";
-import { Card, CardContent } from "@/components/ui/card";
 import { EbGaramond } from "@/app/config/fontConfig";
 
 export default function Work() {
