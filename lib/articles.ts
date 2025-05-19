@@ -4,6 +4,7 @@ import path from "path";
 import moment from "moment";
 import { remark } from "remark";
 import html from "remark-html";
+import gfm from "remark-gfm";
 
 import type { ArticleItem } from "@/app/types/article";
 
@@ -64,6 +65,7 @@ export const getArticleData = async (id: string) => {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
+    .use(gfm)
     .use(html)
     .process(matterResult.content);
 

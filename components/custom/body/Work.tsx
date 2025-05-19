@@ -16,7 +16,7 @@ export default function Work() {
             <p className="text-sm">Research</p>
             <p className="text-sm">Jan 2025 - Current</p>
           </div>
-          <p className={`${EbGaramond.className} text-md py-2`}>
+          <p className={`${EbGaramond.className} text-lg py-2`}>
             Currently, I am working on a research paper on alternative path
             finding mechanism where I test methods and efficiency of algorithms
             to find paths between nodes.

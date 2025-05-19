@@ -44,7 +44,7 @@ const Footer = () => {
 
         <button
           onClick={handleCopy}
-          className="text-sm flex flex-col items-start cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-100 transition"
+          className="text-sm flex justify-between items-start cursor-pointer hover:text-zinc-600 dark:hover:text-zinc-100 transition"
         >
           {email}
           <span

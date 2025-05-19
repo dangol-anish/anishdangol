@@ -20,7 +20,7 @@ const Introduction = () => {
 
       <p>
         This is my personal space to build, break, and share. I also write
-        interactive blogon engineering and design, keeping things simple and
+        interactive blog on engineering and design, keeping things simple and
         practical.
       </p>
     </section>

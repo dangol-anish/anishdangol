@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"); */
+
+/* Now you can continue with the rest of your styles */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -141,4 +144,103 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Custom Blog Theming */
+
+.article {
+  font-family: "EB Garamond", serif;
+  @apply flex flex-col gap-3 text-lg mb-20 leading-relaxed;
+}
+
+/* Headings */
+.article > h1 {
+  @apply text-4xl font-bold tracking-tight  mt-2 mb-4;
+}
+
+.article > h2 {
+  @apply text-3xl font-semibold tracking-tight mt-8 mb-3;
+}
+
+.article > h3 {
+  @apply text-2xl font-semibold tracking-tight mt-6 mb-2;
+}
+
+.article > h4 {
+  @apply text-xl font-semibold tracking-tight mt-4 mb-2;
+}
+
+/* Paragraphs */
+.article > p {
+  @apply mb-4;
+}
+
+/* Lists */
+.article > ol {
+  @apply list-decimal flex flex-col gap-2 pl-8 mb-4;
+}
+
+.article > ul {
+  @apply list-disc flex flex-col gap-2 pl-8 mb-4;
+}
+
+.article > li {
+  @apply ml-2;
+}
+
+/* Blockquote */
+.article blockquote {
+  @apply border-l-4  pl-4 italic my-4;
+}
+
+/* Code Blocks */
+.article pre {
+  @apply rounded p-4 text-sm font-mono overflow-auto my-4;
+}
+
+.article code {
+  @apply rounded px-1 py-0.5 text-sm font-mono;
+}
+
+/* Inline code */
+.article p > code {
+  @apply px-1 rounded text-sm text-pink-600;
+}
+
+/* Images */
+.article img {
+  @apply my-6 rounded-lg w-full max-w-full h-[400px] block mx-auto bg-zinc-400;
+}
+
+/* Links */
+.article a {
+  @apply underline;
+}
+
+/* Tables */
+.article table {
+  @apply w-full border-collapse my-6 text-left;
+}
+
+.article th {
+  @apply border-b-2  font-semibold p-2;
+}
+
+.article td {
+  @apply border-b p-2;
+}
+
+/* Horizontal Rule */
+.article hr {
+  @apply my-6;
+}
+
+/* Strong Text */
+.article strong {
+  @apply font-bold;
+}
+
+/* Emphasis */
+.article em {
+  @apply italic;
 }
