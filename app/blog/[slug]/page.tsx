@@ -1,12 +1,30 @@
-// app/blog/[slug]/page.tsx
-import { getArticleData } from "@/lib/articles";
+import { getArticleData, getAllArticleSlugs } from "@/lib/articles";
+import { Metadata } from "next";
 
-export default async function Article({
+export const dynamicParams = true;
+
+interface ArticlePageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const slugs = getAllArticleSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}) {
-  const articleData = await getArticleData(params.slug);
+}: ArticlePageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const articleData = await getArticleData(resolvedParams.slug);
+  return {
+    title: articleData.title,
+  };
+}
+
+export default async function Article({ params }: ArticlePageProps) {
+  const resolvedParams = await params;
+  const articleData = await getArticleData(resolvedParams.slug);
 
   return (
     <section className="mx-auto max-w-screen-sm dark:bg-[var(--background)] rounded-lg py-28 relative">
