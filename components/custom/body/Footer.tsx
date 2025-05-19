@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col gap-6 m-6">
       <p className="dark:text-zinc-100 font-semibold" id="contact">
-        Let's connect
+        Let&apos;s connect
       </p>
       <p className={`${EbGaramond.className} text-lg`}>
         If you want to get in touch with me about something or just to say hi,
