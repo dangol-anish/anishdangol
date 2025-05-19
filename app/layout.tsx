@@ -1,3 +1,4 @@
+import BackToTopButton from "@/components/custom/BackToTop";
 import Copyright from "@/components/custom/Copyright";
 import Navbar from "@/components/custom/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -5,7 +6,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { RootLayoutProps } from "./types/layout";
-import BackToTopButton from "@/components/custom/BackToTop";
 
 // Load Inter font
 const inter = Inter({
