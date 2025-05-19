@@ -1,6 +1,12 @@
 import { getArticleData } from "@/lib/articles";
 
-const Article = async ({ params }: { params: { slug: string } }) => {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+const Article = async ({ params }: PageProps) => {
   const articleData = await getArticleData(params.slug);
 
   return (
