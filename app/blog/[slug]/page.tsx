@@ -1,14 +1,11 @@
 // app/blog/[slug]/page.tsx
-
 import { getArticleData } from "@/lib/articles";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-const Article = async ({ params }: Props) => {
+export default async function Article({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const articleData = await getArticleData(params.slug);
 
   return (
@@ -22,6 +19,4 @@ const Article = async ({ params }: Props) => {
       />
     </section>
   );
-};
-
-export default Article;
+}
