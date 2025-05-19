@@ -1,5 +1,4 @@
 import ContentList from "@/components/custom/ContentList";
-import React from "react";
 import { projects } from "../constants/projectItems";
 
 const Projects = () => {
