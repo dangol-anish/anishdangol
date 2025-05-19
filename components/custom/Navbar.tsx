@@ -1,11 +1,9 @@
 "use client";
-import React from "react";
-import { ModeToggle } from "./Theme";
-import Image from "next/image";
 import { navItems } from "@/app/constants/navItems";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import Icon from "../ui/Logo";
+import React from "react";
+import { ModeToggle } from "./Theme";
 
 const Navbar = () => {
   const pathname = usePathname();

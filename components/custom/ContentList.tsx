@@ -1,9 +1,9 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import { Github } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { Github } from "lucide-react";
-import { motion } from "framer-motion";
 
 interface ContentItem {
   title: string;

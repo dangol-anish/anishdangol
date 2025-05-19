@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function BackToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
