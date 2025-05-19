@@ -1,12 +1,14 @@
+// app/blog/[slug]/page.tsx
+
 import { getArticleData } from "@/lib/articles";
 
-type PageProps = {
+type Props = {
   params: {
     slug: string;
   };
 };
 
-const Article = async ({ params }: PageProps) => {
+const Article = async ({ params }: Props) => {
   const articleData = await getArticleData(params.slug);
 
   return (
