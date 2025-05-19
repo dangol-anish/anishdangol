@@ -1,5 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
-
 export const blogItems = [
   {
     title: "Sphere",
