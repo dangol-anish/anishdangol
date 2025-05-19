@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Github } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { ArrowUpRight, Github } from "lucide-react";
 
 interface SectionItem {
   title: string;

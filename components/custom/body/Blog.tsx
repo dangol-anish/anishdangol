@@ -1,6 +1,5 @@
-import { blogItems } from "@/app/constants/blogItems";
-import SectionList from "./SectionList";
 import { getCategorisedArticle } from "@/lib/articles";
+import SectionList from "./SectionList";
 
 type Article = {
   id: string;

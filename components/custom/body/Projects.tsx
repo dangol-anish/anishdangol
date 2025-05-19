@@ -1,5 +1,5 @@
-import SectionList from "./SectionList";
 import { projects } from "@/app/constants/projectItems";
+import SectionList from "./SectionList";
 
 export default function Projects() {
   return (

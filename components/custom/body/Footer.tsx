@@ -2,7 +2,7 @@
 import { EbGaramond } from "@/app/config/fontConfig";
 import { footerItems } from "@/app/constants/footeritems";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Footer = () => {
   const [copied, setCopied] = useState(false);
