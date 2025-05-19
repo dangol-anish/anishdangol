@@ -11,12 +11,5 @@ export default function Blog() {
     live: `/blog/${article.id}`,
   }));
 
-  return (
-    <ContentList
-      title="Articles"
-      items={blogItems}
-      link="/blog"
-      linkText="See all articles"
-    />
-  );
+  return <ContentList title="Articles" items={blogItems} />;
 }

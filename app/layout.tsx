@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import BackToTopButton from "@/components/custom/BackToTop";
 import Copyright from "@/components/custom/Copyright";
 import Navbar from "@/components/custom/Navbar";
@@ -33,7 +34,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <Navbar />
 
           {/* Content area that grows */}
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow">
+            {children}
+            <Analytics />
+          </main>
 
           {/* Footer at the bottom */}
           <Copyright />

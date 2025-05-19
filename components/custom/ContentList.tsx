@@ -16,8 +16,6 @@ interface ContentItem {
 interface ContentListProps {
   title: string;
   items: ContentItem[];
-  link?: string;
-  linkText?: string;
 }
 
 const containerVariants = {
@@ -34,12 +32,7 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
-export default function ContentList({
-  title,
-  items,
-  link,
-  linkText = "See all",
-}: ContentListProps) {
+export default function ContentList({ title, items }: ContentListProps) {
   return (
     <section className="mx-auto max-w-screen-sm dark:bg-[var(--background)] rounded-lg py-28 relative">
       <div className="flex justify-between items-center my-6 px-6">
