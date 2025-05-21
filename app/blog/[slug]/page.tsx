@@ -1,11 +1,8 @@
+import { ArticlePageProps } from "@/app/types/article";
 import { getArticleData, getAllArticleSlugs } from "@/lib/articles";
 import { Metadata } from "next";
 
 export const dynamicParams = true;
-
-interface ArticlePageProps {
-  params: Promise<{ slug: string }>;
-}
 
 export async function generateStaticParams() {
   const slugs = getAllArticleSlugs();

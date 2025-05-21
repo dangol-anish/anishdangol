@@ -1,11 +1,6 @@
 import { getCategorisedArticle } from "@/lib/articles";
 import SectionList from "./SectionList";
-
-type Article = {
-  id: string;
-  title: string;
-  date: string;
-};
+import { Article } from "@/app/types/article";
 
 export default function BlogPosts() {
   const categorised = getCategorisedArticle();

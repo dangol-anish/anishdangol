@@ -5,7 +5,6 @@ import path from "path";
 import { remark } from "remark";
 import gfm from "remark-gfm";
 import html from "remark-html";
-
 import type { ArticleItem } from "@/app/types/article";
 
 const articleDirectory = path.join(process.cwd(), "articles");

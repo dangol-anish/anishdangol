@@ -13,7 +13,7 @@ export function ModeToggle() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // Prevents mismatch on server/client
+  if (!mounted) return null;
 
   const isDark = theme === "dark";
 

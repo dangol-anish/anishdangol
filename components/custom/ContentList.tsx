@@ -1,22 +1,10 @@
 "use client";
+
+import { ContentListProps } from "@/app/types/content";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import Link from "next/link";
-import { ReactNode } from "react";
-
-interface ContentItem {
-  title: string;
-  description: string;
-  icon?: ReactNode;
-  live?: string;
-  repo?: string;
-}
-
-interface ContentListProps {
-  title: string;
-  items: ContentItem[];
-}
 
 const containerVariants = {
   hidden: {},

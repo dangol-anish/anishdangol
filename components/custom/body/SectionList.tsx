@@ -1,22 +1,7 @@
+import { SectionListProps } from "@/app/types/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Github } from "lucide-react";
 import Link from "next/link";
-import { ReactNode } from "react";
-
-interface SectionItem {
-  title: string;
-  description: string;
-  icon?: ReactNode;
-  live?: string;
-  repo?: string;
-}
-
-interface SectionListProps {
-  title: string;
-  items: SectionItem[];
-  link?: string;
-  linkText?: string;
-}
 
 export default function SectionList({
   title,
