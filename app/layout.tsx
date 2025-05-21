@@ -8,7 +8,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { RootLayoutProps } from "./types/layout";
 
-// Load Inter font
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -32,17 +31,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           disableTransitionOnChange
         >
           <Navbar />
-
-          {/* Content area that grows */}
           <main className="flex-grow">
             {children}
             <Analytics />
           </main>
-
-          {/* Footer at the bottom */}
           <Copyright />
-
-          {/* Optional Back to Top Button */}
           <BackToTopButton />
         </ThemeProvider>
       </body>

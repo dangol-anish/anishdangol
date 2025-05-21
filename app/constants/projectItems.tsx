@@ -17,7 +17,6 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/RS-alternate-route-finder",
-    // live: "https://sphere.example.com",
   },
   {
     key: "chronicle",
@@ -69,7 +68,6 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/freelancing-website",
-    // live: "https://freelancing-website.example.com",
   },
   {
     key: "resume-expert",
@@ -87,7 +85,6 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/resume-expert",
-    // live: "https://resume-expert-omega.vercel.app/",
   },
   {
     key: "mis-ecommerce",
@@ -105,7 +102,6 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/mis_e-commerce_webapp",
-    // live: "https://mis-ecommerce.example.com",
   },
   {
     key: "nasa-apod-viewer",

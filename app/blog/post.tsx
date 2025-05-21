@@ -1,4 +1,3 @@
-// post.tsx
 import { useRouter } from "next/router";
 
 const Post = () => {

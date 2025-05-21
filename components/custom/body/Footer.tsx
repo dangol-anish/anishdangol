@@ -1,4 +1,5 @@
 "use client";
+
 import { EbGaramond } from "@/app/config/fontConfig";
 import { footerItems } from "@/app/constants/footeritems";
 import Link from "next/link";
@@ -12,7 +13,7 @@ const Footer = () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
-      setTimeout(() => setCopied(false), 1000); // reset message after 2s
+      setTimeout(() => setCopied(false), 1000);
     } catch (err) {
       console.error("Failed to copy!", err);
     }

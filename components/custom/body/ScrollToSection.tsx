@@ -15,11 +15,10 @@ export default function ScrollToSection() {
         setTimeout(() => {
           target.scrollIntoView({ behavior: "smooth" });
 
-          // Remove scrollTo from the URL after scrolling
           const url = new URL(window.location.href);
           url.searchParams.delete("scrollTo");
           window.history.replaceState({}, "", url.pathname + url.search);
-        }, 100); // small delay to ensure DOM is ready
+        }, 100);
       }
     }
   }, [searchParams]);

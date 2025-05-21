@@ -1,4 +1,3 @@
-// app/Main.tsx (server component)
 import BackToTopButton from "./BackToTop";
 import BlogPosts from "./body/Blog";
 import Footer from "./body/Footer";
