@@ -8,7 +8,7 @@ const PersonalInfo = () => {
           Anish Dangol
         </h1>
         <p className="text-md tracking-wider dark:text-zinc-100 text-zinc-700">
-          Software Engineer
+          Software Developer
         </p>
       </div>
       <Image

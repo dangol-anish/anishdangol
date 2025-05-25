@@ -28,7 +28,7 @@ const Footer = () => {
         If you want to get in touch with me about something or just to say hi,
         reach out on social media or send me an email.
       </p>
-      <div className="flex flex-col  gap-2 flex-wrap">
+      <div className="flex flex-col gap-2 flex-wrap">
         <div className="flex gap-3 flex-wrap">
           {footerItems.map(({ label, path, icon: Icon }) => (
             <Link

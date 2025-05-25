@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: "Learn more about Anish Dangol.",
 };
 
-export default function Blog() {
-  const categorised = getCategorisedArticle();
+export default async function Blog() {
+  const categorised = await getCategorisedArticle();
   const articles = Object.values(categorised).flat();
 
   const blogItems = articles.map((article) => ({

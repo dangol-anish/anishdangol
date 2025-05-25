@@ -6,6 +6,10 @@ import { remark } from "remark";
 import gfm from "remark-gfm";
 import html from "remark-html";
 import type { ArticleItem } from "@/app/types/article";
+import remarkRehype from "remark-rehype";
+import rehypeSlug from "rehype-slug";
+import rehypeStringify from "rehype-stringify";
+import rehypeHeadingOffset from "./rehype-heading-offset";
 
 const articleDirectory = path.join(process.cwd(), "articles");
 
@@ -65,6 +69,10 @@ export const getArticleData = async (id: string) => {
   const processedContent = await remark()
     .use(gfm)
     .use(html)
+    .use(remarkRehype) // convert to HTML AST
+    .use(rehypeSlug) // add slug ids to headings
+    .use(rehypeStringify) // serialize HTML AST to string
+    .use(rehypeHeadingOffset)
     .process(matterResult.content);
 
   const contentHtml = processedContent.toString();

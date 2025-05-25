@@ -28,7 +28,7 @@ export default function SectionList({
       <div className="space-y-4 px-6">
         {items.slice(0, 3).map((item) => (
           <Card
-            key={item.title}
+            key={item.live ?? item.title ?? Math.random()}
             className="group border-0 border-b border-zinc-300 dark:border-zinc-700 rounded-none dark:bg-zinc-900 rounded-t-xl transition-all duration-300 relative hover:z-10 hover:-mx-4 hover:px-4 hover:bg-zinc-200 dark:hover:bg-zinc-800 my-1 shadow-none"
           >
             <CardContent className="flex items-center justify-between px-0 w-full max-w-[100%]">

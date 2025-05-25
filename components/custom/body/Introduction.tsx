@@ -4,7 +4,7 @@ const Introduction = () => {
   return (
     <section id="about" className={`${EbGaramond.className} p-6 text-lg`}>
       <p>
-        I&apos;m a <em>software engineer</em>, <em>UI/UX designer</em>, and a{" "}
+        I&apos;m a <em>software developer</em>, <em>UI/UX designer</em>, and a{" "}
         <em>problem solver</em> who loves crafting simple and meaningful digital
         experiences. My approach is shaped by minimalism, focusing on clarity,
         function, and clean design.
