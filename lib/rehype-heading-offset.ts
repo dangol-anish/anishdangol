@@ -14,10 +14,8 @@ export default function rehypeHeadingOffset() {
       ) {
         const id = node.properties.id;
 
-        // Remove the id from the heading
         delete node.properties.id;
 
-        // Spacer div with offset style and same id
         const spacer: Element = {
           type: "element",
           tagName: "div",
