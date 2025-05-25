@@ -37,6 +37,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex space-x-2 transition"
+              aria-label="sm-logo"
             >
               <Icon className="w-7 h-7 transition-colors hover:text-zinc-500 dark:hover:text-zinc-100" />
             </Link>

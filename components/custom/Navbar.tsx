@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { ModeToggle } from "./Theme";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -38,11 +39,14 @@ const Navbar = () => {
         id="top"
       >
         {/* Logo */}
-        <Link
-          href="/"
-          onClick={handleLogoClick}
-          className="rounded-full p-1 bg-[#19191b] dark:bg-white border-white dark:border-[#19191b] relative w-7 h-7 "
-        ></Link>
+        <Link href="/" onClick={handleLogoClick} aria-label="Profile Logo">
+          <Image
+            src="/assets/personal/anish_logo.svg"
+            alt="Logo"
+            width={28}
+            height={28}
+          />
+        </Link>
 
         {/* Navbar Links */}
         <div className="flex items-center">

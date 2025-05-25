@@ -1,5 +1,11 @@
 import ContentList from "@/components/custom/ContentList";
 import { getCategorisedArticle } from "@/lib/articles";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Anish Dangol",
+  description: "Learn more about Anish Dangol.",
+};
 
 export default function Blog() {
   const categorised = getCategorisedArticle();
@@ -7,9 +13,9 @@ export default function Blog() {
 
   const blogItems = articles.map((article) => ({
     title: article.title,
-    description: `${article.category} | ${article.date}`,
+    description: `${article.date}`,
     live: `/blog/${article.id}`,
   }));
 
-  return <ContentList title="Articles" items={blogItems} />;
+  return <ContentList title="Blog Posts" items={blogItems} />;
 }

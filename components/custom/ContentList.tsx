@@ -86,6 +86,7 @@ export default function ContentList({ title, items }: ContentListProps) {
                       href={item.repo}
                       target="_blank"
                       className="text-sm hover:underline flex items-center gap-1 dark:text-zinc-400 dark:hover:text-zinc-100"
+                      aria-label="Github Logo"
                     >
                       <Github size={16} />
                     </Link>
