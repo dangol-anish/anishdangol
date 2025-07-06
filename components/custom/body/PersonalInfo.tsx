@@ -4,10 +4,10 @@ const PersonalInfo = () => {
   return (
     <section className="flex justify-between p-6">
       <div className=" py-3 ">
-        <h1 className="text-lg tracking-wider dark:text-zinc-100 text-zinc-700 font-bold">
+        <h1 className="text-xl tracking-wider dark:text-zinc-100 text-zinc-700 font-bold">
           Anish Dangol
         </h1>
-        <p className="text-md tracking-wider dark:text-zinc-100 text-zinc-700">
+        <p className="text-lg tracking-wider dark:text-zinc-100 text-zinc-700">
           Software Developer
         </p>
       </div>

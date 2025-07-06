@@ -17,6 +17,25 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/RS-alternate-route-finder",
+    live: "https://road-sense-arf.vercel.app/",
+  },
+  {
+    key: "align-cv",
+    title: "AlignCV",
+    description:
+      "A modern web app that helps you analyze resumes, match jobs, and create cover letters effortlessly using AI.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/AlignCV",
+    live: "https://align-cv.vercel.app",
   },
   {
     key: "chronicle",
@@ -51,6 +70,23 @@ export const projects = [
     active: true,
     repo: "https://github.com/dangol-anish/linkleap",
     live: "https://linkleap-client.vercel.app/",
+  },
+  {
+    key: "nasa-apod-viewer",
+    title: "NASA Astronomy Picture Viewer",
+    description: "Next.js app displaying NASA’s Astronomy Picture of the Day.",
+    icon: (
+      <Image
+        src="/assets/link.svg"
+        alt="Link"
+        width={16}
+        height={16}
+        className="dark:invert"
+      />
+    ),
+    active: true,
+    repo: "https://github.com/dangol-anish/nextjs-assignment",
+    live: "https://nasa-astronomy-highlight.vercel.app/",
   },
   {
     key: "freelancing-platform-nepal",
@@ -102,22 +138,5 @@ export const projects = [
     ),
     active: true,
     repo: "https://github.com/dangol-anish/mis_e-commerce_webapp",
-  },
-  {
-    key: "nasa-apod-viewer",
-    title: "NASA Astronomy Picture Viewer",
-    description: "Next.js app displaying NASA’s Astronomy Picture of the Day.",
-    icon: (
-      <Image
-        src="/assets/link.svg"
-        alt="Link"
-        width={16}
-        height={16}
-        className="dark:invert"
-      />
-    ),
-    active: true,
-    repo: "https://github.com/dangol-anish/nextjs-assignment",
-    live: "https://nasa-astronomy-highlight.vercel.app/",
   },
 ];

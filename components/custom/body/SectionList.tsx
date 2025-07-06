@@ -12,7 +12,7 @@ export default function SectionList({
   return (
     <section className="relative overflow-visible pb-6 pt-3">
       <div className="flex justify-between items-center my-6 px-6">
-        <p className="text-md dark:text-zinc-100 font-semibold text-zinc-900">
+        <p className="text-lg dark:text-zinc-100 font-semibold text-zinc-900">
           {title}
         </p>
         {link && (
@@ -34,7 +34,7 @@ export default function SectionList({
             <CardContent className="flex items-center justify-between px-0 w-full max-w-[100%]">
               <div className="flex items-start gap-4 w-[90%]">
                 <div className="w-full">
-                  <p className="font-medium text-md text-zinc-700 dark:text-zinc-100">
+                  <p className="font-medium text-lg text-zinc-700 dark:text-zinc-100">
                     {item.title}
                   </p>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400 ">
