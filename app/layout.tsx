@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { RootLayoutProps } from "./types/layout";
+import { RootLayoutProps } from "@/types/layout";
 
 const inter = Inter({
   variable: "--font-inter",
