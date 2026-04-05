@@ -28,17 +28,15 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-3">
             <Button
               asChild
-              className="group h-10 px-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0"
+              className="group h-10 px-4 transition-all duration-200 hover:pr-7 hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0"
             >
               <a
                 href={`mailto:${EMAIL}`}
                 aria-label="Email Anish"
-                className="inline-flex items-center"
+                className="relative inline-flex items-center justify-center"
               >
                 Let&apos;s talk
-                <span className="inline-flex w-0 overflow-hidden transition-[width] duration-200 group-hover:w-4 group-focus-visible:w-4">
-                  <ArrowUpRight className="ml-1 h-4 w-4 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" />
-                </span>
+                <ArrowUpRight className="absolute mr-1 right-1 ml-1 h-4 w-4 opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" />
               </a>
             </Button>
             {/* <Button asChild variant="outline" className="h-10 px-4">
