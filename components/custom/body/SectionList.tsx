@@ -17,8 +17,8 @@ export default function SectionList({
   const displayItems = items.slice(0, limit);
 
   return (
-    <section className={cn("relative py-10", className)}>
-      <div className="flex items-end justify-between gap-4">
+    <section className={cn("relative py-8 sm:py-10", className)}>
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div className="space-y-1">
           <Heading className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             {title}

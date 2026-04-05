@@ -26,12 +26,12 @@ export default async function Article({ params }: ArticlePageProps) {
 
   return (
     <section className="relative">
-      <PageContainer className="pt-24 pb-16">
+      <PageContainer className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <header className="mb-8 space-y-2">
           <p className="text-sm text-muted-foreground">
             {articleData.date.toString()}
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+          <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
             {articleData.title}
           </h1>
         </header>

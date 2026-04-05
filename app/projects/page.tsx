@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const Projects = () => {
   return (
     <main className="relative">
-      <PageContainer className="pt-24 pb-16">
+      <PageContainer className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <SectionList
           title="Projects"
           items={projects}

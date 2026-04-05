@@ -1,6 +1,5 @@
 import BlogPosts from "./body/Blog";
 import Footer from "./body/Footer";
-import About from "./body/About";
 import Hero from "./body/Hero";
 import MotionWrapper from "./body/MotionWrapper";
 import PageContainer from "./PageContainer";
@@ -10,7 +9,7 @@ import CurrentFocus from "./body/CurrentFocus";
 
 const Main = () => (
   <main className="relative">
-    <PageContainer className="pt-24 pb-16">
+    <PageContainer className="pt-16 pb-14 sm:pt-24 sm:pb-16">
       <MotionWrapper>
         <Hero />
         {/* <About /> */}

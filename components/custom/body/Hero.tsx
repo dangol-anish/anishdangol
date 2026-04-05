@@ -7,8 +7,8 @@ const EMAIL = "anishdangol.work@gmail.com";
 
 export default function Hero() {
   return (
-    <header className="pt-10 pb-6">
-      <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+    <header className="pt-8 pb-4 sm:pt-10 sm:pb-6">
+      <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center sm:gap-8">
         <div className="space-y-5">
           {/* <div className="inline-flex items-center gap-2 rounded-full border bg-background/60 px-3 py-1 text-xs text-muted-foreground">
             <span className="size-1.5 rounded-full bg-foreground/70" />
@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="flex flex-wrap items-center gap-3">
             <Button
               asChild
-              className="group h-10 px-4 transition-all duration-200 hover:pr-7 hover:-translate-y-0.5 hover:shadow-sm active:translate-y-0"
+              className="group h-10 w-full px-4 transition-all duration-200 active:translate-y-0 sm:w-auto sm:hover:pr-7 sm:hover:-translate-y-0.5 sm:hover:shadow-sm"
             >
               <a
                 href={`mailto:${EMAIL}`}
@@ -36,7 +36,7 @@ export default function Hero() {
                 className="relative inline-flex items-center justify-center"
               >
                 Let&apos;s talk
-                <ArrowUpRight className="absolute mr-1 right-1 ml-1 h-4 w-4 opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100" />
+                <ArrowUpRight className="absolute right-1 h-4 w-4 opacity-0 transition-all duration-200 sm:group-hover:opacity-100 sm:group-hover:translate-x-0.5 group-focus-visible:opacity-100 group-focus-visible:translate-x-0.5" />
               </a>
             </Button>
             {/* <Button asChild variant="outline" className="h-10 px-4">
@@ -56,6 +56,7 @@ export default function Hero() {
                   href={path}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={label}
                   className="inline-flex items-center gap-2 rounded-md border bg-background/50 px-2 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Icon className="h-4 w-4" />
@@ -64,7 +65,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex md:justify-end">
+        <div className="flex justify-center md:justify-end">
           <div className="relative overflow-hidden rounded-3xl p-2 ">
             <Image
               src="/assets/personal/me.webp"
@@ -73,9 +74,10 @@ export default function Hero() {
               alt="Anish Dangol"
               className="aspect-square w-[180px] rounded-2xl object-cover sm:w-[220px]"
               priority
-              quality={85}
+              quality={80}
               placeholder="blur"
               blurDataURL="/assets/personal/me-blur.webp"
+              sizes="(max-width: 640px) 180px, 220px"
             />
           </div>
         </div>

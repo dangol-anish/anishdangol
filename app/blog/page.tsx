@@ -34,7 +34,7 @@ export default async function Blog() {
 
   return (
     <main className="relative">
-      <PageContainer className="pt-24 pb-16">
+      <PageContainer className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <ArticleList
           title="Blog posts"
           description="Thoughts, ideas, and insights on what I’m learning, building, and exploring"

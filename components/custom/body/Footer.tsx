@@ -20,9 +20,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="py-12" id="contact">
+    <footer className="py-10 sm:py-12" id="contact">
       <div className=" border-0 border-t-1 bg-card/40 ">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between mt-12">
+        <div className="mt-10 flex flex-col gap-6 sm:mt-12 sm:flex-row sm:items-start sm:justify-between">
           <div className="space-y-2">
             <p className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
               Let&apos;s build something clean.

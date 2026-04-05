@@ -36,8 +36,8 @@ export default function ArticleList({
   const displayItems = typeof limit === "number" ? items.slice(0, limit) : items;
 
   return (
-    <section className={cn("py-8 pt-12", className)}>
-      <div className="flex items-end justify-between gap-4">
+    <section className={cn("py-8 pt-10 sm:pt-12", className)}>
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div className="space-y-1">
           <Heading className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             {title}

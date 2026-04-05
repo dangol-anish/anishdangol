@@ -14,14 +14,14 @@ const focusItems = [
 
 export default function CurrentFocus() {
   return (
-    <section className="py-8 pt-12">
-      <div className="flex items-end justify-between gap-4">
+    <section className="py-8 pt-10 sm:pt-12">
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div className="space-y-1">
           <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             Current focus
           </h2>
           <p className="text-sm text-muted-foreground">
-            What I'm building and researching right now.
+            What I&apos;m building and researching right now.
           </p>
         </div>
       </div>

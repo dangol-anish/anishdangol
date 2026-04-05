@@ -17,14 +17,17 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as const },
+  },
 };
 
 export default function ContentList({ title, items }: ContentListProps) {
   return (
     <section className="relative">
-      <PageContainer className="pt-24 pb-16">
+      <PageContainer className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <div className="flex items-end justify-between gap-4">
           <div className="space-y-1">
             <h1 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -36,7 +39,7 @@ export default function ContentList({ title, items }: ContentListProps) {
         <motion.div
           className="mt-6 grid gap-3"
           variants={containerVariants}
-          initial="hidden"
+          initial={false}
           animate="show"
         >
           {items.map((item, index) => {

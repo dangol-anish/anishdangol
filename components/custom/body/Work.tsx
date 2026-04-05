@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { HiArrowUpRight } from "react-icons/hi2";
-
 const workItems = [
   {
     id: 1,
@@ -41,7 +38,7 @@ const workItems = [
 export default function Work() {
   return (
     <section className="py-8">
-      <div className="flex items-end justify-between gap-4">
+      <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
         <div className="space-y-1">
           <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
             Work Experience
@@ -54,13 +51,13 @@ export default function Work() {
 
       <div className="mt-8 space-y-8 relative">
         {/* Timeline line */}
-        <div className="absolute left-[15px] top-0 bottom-0 w-px bg-border" />
+        <div className="absolute left-[13px] top-0 bottom-0 w-px bg-border sm:left-[15px]" />
 
         {workItems.map((item) => (
-          <div key={item.id} className="relative pl-12">
+          <div key={item.id} className="relative pl-10 sm:pl-12">
             {/* Timeline dot */}
-            <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full border-2 border-border bg-background flex items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-foreground" />
+            <div className="absolute left-0 top-1.5 flex h-7 w-7 items-center justify-center rounded-full border-2 border-border bg-background sm:h-8 sm:w-8">
+              <div className="h-1.5 w-1.5 rounded-full bg-foreground sm:h-2 sm:w-2" />
             </div>
 
             {/* Content */}
