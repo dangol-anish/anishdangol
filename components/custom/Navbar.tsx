@@ -1,11 +1,21 @@
 "use client";
 
 import { navItems } from "@/app/constants/navItems";
+import PageContainer from "@/components/custom/PageContainer";
+import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { ModeToggle } from "./Theme";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -33,50 +43,93 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 py-5 bg-gradient-to-b backdrop-blur-sm from-zinc-100 via-zinc-100 via-35% to-zinc-100/5 dark:from-zinc-900 dark:via-zinc-900 dark:via-35% dark:to-zinc-900/5">
-      <div
-        className="mx-auto max-w-screen-sm px-6 flex items-center justify-between"
+    <nav className="fixed inset-x-0 top-0 z-50 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <PageContainer
+        className="flex h-16 items-center justify-between"
         id="top"
       >
-        {/* Logo */}
-        <Link href="/" onClick={handleLogoClick} aria-label="Profile Logo">
+        <Link
+          href="/"
+          onClick={handleLogoClick}
+          aria-label="Go to home"
+          className="flex items-center gap-3 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
           <Image
             src="/assets/personal/anish_logo.svg"
             alt="Logo"
             width={28}
             height={28}
+            priority
           />
         </Link>
 
-        {/* Navbar Links */}
-        <div className="flex items-center">
+        <div className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => {
-            if (item.label.toLowerCase() === "contact") {
+            const isContact = item.label.toLowerCase() === "contact";
+            const isActive =
+              !isContact &&
+              (pathname === item.path || pathname.startsWith(`${item.path}/`));
+
+            if (isContact) {
               return (
-                <Link
-                  key={item.label}
-                  href="/#contact"
-                  onClick={handleContactClick}
-                  className="text-md transition-colors px-2 py-2 hover:bg-gray-200 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white rounded-lg tracking-wide"
-                >
-                  {item.label}
-                </Link>
+                <Button key={item.label} variant="ghost" asChild>
+                  <Link href="/#contact" onClick={handleContactClick}>
+                    Contact
+                  </Link>
+                </Button>
               );
             }
 
             return (
-              <Link
+              <Button
                 key={item.label}
-                href={item.path}
-                className="text-md transition-colors px-2 py-2 hover:bg-gray-200 hover:text-zinc-600 dark:hover:bg-zinc-800 dark:hover:text-white rounded-lg tracking-wide"
+                variant="ghost"
+                asChild
+                className={cn(isActive && "bg-accent text-accent-foreground")}
               >
-                {item.label}
-              </Link>
+                <Link href={item.path}>
+                  {item.label[0].toUpperCase() + item.label.slice(1)}
+                </Link>
+              </Button>
             );
           })}
           <ModeToggle />
         </div>
-      </div>
+
+        <div className="flex items-center gap-2 md:hidden">
+          <ModeToggle />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon" aria-label="Open menu">
+                <Menu className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-40">
+              {navItems.map((item) => {
+                const isContact = item.label.toLowerCase() === "contact";
+
+                if (isContact) {
+                  return (
+                    <DropdownMenuItem key={item.label} asChild>
+                      <Link href="/#contact" onClick={handleContactClick}>
+                        Contact
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                }
+
+                return (
+                  <DropdownMenuItem key={item.label} asChild>
+                    <Link href={item.path}>
+                      {item.label[0].toUpperCase() + item.label.slice(1)}
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </PageContainer>
     </nav>
   );
 };

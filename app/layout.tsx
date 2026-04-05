@@ -4,34 +4,34 @@ import Copyright from "@/components/custom/Copyright";
 import Navbar from "@/components/custom/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { RootLayoutProps } from "@/types/layout";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "Home | Anish Dangol",
-  description: "My personal portfolio site",
+  description:
+    "Anish Dangol — software developer building minimal, high-performance web experiences.",
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="min-h-screen flex flex-col font-sans dark:bg-[var(--background)] transition-all dark:text-zinc-300 text-zinc-700">
+      <body className="min-h-screen bg-background text-foreground antialiased transition-colors flex flex-col">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <a
+            href="#content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] rounded-md bg-background px-3 py-2 text-sm text-foreground shadow-md ring-1 ring-border"
+          >
+            Skip to content
+          </a>
           <Navbar />
-          <main className="flex-grow">
+          <main id="content" className="flex-grow">
             {children}
             <Analytics />
           </main>

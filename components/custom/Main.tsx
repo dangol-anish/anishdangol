@@ -1,37 +1,26 @@
-import BackToTopButton from "./BackToTop";
 import BlogPosts from "./body/Blog";
 import Footer from "./body/Footer";
-import Introduction from "./body/Introduction";
+import About from "./body/About";
+import Hero from "./body/Hero";
 import MotionWrapper from "./body/MotionWrapper";
-import PersonalInfo from "./body/PersonalInfo";
+import PageContainer from "./PageContainer";
 import Projects from "./body/Projects";
 import Work from "./body/Work";
+import CurrentFocus from "./body/CurrentFocus";
 
 const Main = () => (
-  <main className="mx-auto max-w-screen-sm dark:bg-[var(--background)] rounded-lg py-28 relative">
-    <MotionWrapper>
-      <section className="relative">
-        <PersonalInfo />
-      </section>
-      <section className="relative">
-        <Introduction />
-      </section>
-      <section className="relative my-6">
+  <main className="relative">
+    <PageContainer className="pt-24 pb-16">
+      <MotionWrapper>
+        <Hero />
+        {/* <About /> */}
+        <CurrentFocus />
         <Work />
-      </section>
-      <section className="relative">
         <Projects />
-      </section>
-      <section className="relative">
         <BlogPosts />
-      </section>
-      <section className="relative">
         <Footer />
-      </section>
-    </MotionWrapper>
-    <div className="fixed bottom-6 right-6">
-      <BackToTopButton />
-    </div>
+      </MotionWrapper>
+    </PageContainer>
   </main>
 );
 

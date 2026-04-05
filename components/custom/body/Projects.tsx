@@ -8,6 +8,7 @@ export default function Projects() {
       items={projects}
       link="/projects"
       linkText="See all projects"
+      description="Selected work across ideas and execution"
     />
   );
 }

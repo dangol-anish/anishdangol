@@ -1,4 +1,5 @@
-import ContentList from "@/components/custom/ContentList";
+import PageContainer from "@/components/custom/PageContainer";
+import SectionList from "@/components/custom/body/SectionList";
 import { projects } from "../constants/projectItems";
 import { Metadata } from "next";
 
@@ -8,7 +9,20 @@ export const metadata: Metadata = {
 };
 
 const Projects = () => {
-  return <ContentList title="Projects" items={projects} />;
+  return (
+    <main className="relative">
+      <PageContainer className="pt-24 pb-16">
+        <SectionList
+          title="Projects"
+          items={projects}
+          description="Selected work across ideas and execution"
+          limit={projects.length}
+          heading="h1"
+          className="py-0"
+        />
+      </PageContainer>
+    </main>
+  );
 };
 
 export default Projects;

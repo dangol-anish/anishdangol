@@ -6,6 +6,7 @@ export interface SectionItem {
   icon?: ReactNode;
   live?: string;
   repo?: string;
+  tags?: string[];
 }
 
 export interface SectionListProps {
@@ -13,4 +14,8 @@ export interface SectionListProps {
   items: SectionItem[];
   link?: string;
   linkText?: string;
+  description?: string;
+  limit?: number;
+  heading?: "h1" | "h2";
+  className?: string;
 }

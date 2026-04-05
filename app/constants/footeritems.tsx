@@ -11,14 +11,10 @@ export const footerItems = [
     path: "https://www.linkedin.com/in/dangol-anish",
     icon: FaLinkedin,
   },
-  {
-    label: "Instagram",
-    path: "https://www.instagram.com/anishdngl",
-    icon: FaInstagram,
-  },
+
   {
     label: "Email",
-    path: "mailto:dangol.anish001@gmail.com",
+    path: "mailto:anishdangol.work@gmail.com",
     icon: FaEnvelope,
   },
 ];

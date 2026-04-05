@@ -1,6 +1,7 @@
 import { ArticlePageProps } from "@/app/types/article";
 import { getArticleData, getAllArticleSlugs } from "@/lib/articles";
 import { Metadata } from "next";
+import PageContainer from "@/components/custom/PageContainer";
 
 export const dynamicParams = true;
 
@@ -24,14 +25,22 @@ export default async function Article({ params }: ArticlePageProps) {
   const articleData = await getArticleData(resolvedParams.slug);
 
   return (
-    <section className="mx-auto max-w-screen-sm dark:bg-[var(--background)] rounded-lg py-28 relative">
-      <p className="px-6 text-sm text-zinc-500">
-        {articleData.date.toString()}
-      </p>
-      <article
-        className="article px-6"
-        dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
-      />
+    <section className="relative">
+      <PageContainer className="pt-24 pb-16">
+        <header className="mb-8 space-y-2">
+          <p className="text-sm text-muted-foreground">
+            {articleData.date.toString()}
+          </p>
+          <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
+            {articleData.title}
+          </h1>
+        </header>
+
+        <article
+          className="article"
+          dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
+        />
+      </PageContainer>
     </section>
   );
 }
